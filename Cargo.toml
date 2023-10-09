@@ -1,0 +1,4 @@
+[package]
+name = "chutes_and_ladders_rewrite"
+version = "0.1.0"
+edition = "2021"
