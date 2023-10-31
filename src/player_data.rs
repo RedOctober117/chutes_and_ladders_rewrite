@@ -5,7 +5,8 @@ pub mod player_data {
     }
 
     pub struct Player {
-        token: char,
+        identifier: String,
+        number: i32,
         coords: Coords
     }
 
@@ -45,24 +46,25 @@ pub mod player_data {
     impl Player {
         pub fn new() -> Player {
             Player {
-                token: ' ',
+                identifier: String::from(""),
+                number: 0,
                 coords: Coords::new(),
             }
         }
 
-        pub fn build_player(token: char, coords: Coords) -> Player {
+        pub fn build_player(identifier: String, coords: Coords) -> Player {
             Player {
-                token: token,
+                identifier: identifier,
                 coords: coords,
             }
         }
         
-        pub fn define_token(&mut self, token: char) -> () {
-            self.token = token;
+        pub fn define_token(&mut self, identifier: String) -> () {
+            self.identifier = identifier;
         }
 
-        pub fn get_token(&self) -> char {
-            self.token
+        pub fn get_token(&self) -> String {
+            self.identifier
         }
 
         pub fn define_x_y(&mut self, x: usize, y: usize) -> () {
@@ -81,6 +83,10 @@ pub mod player_data {
 
         pub fn get_coords(&self) -> (usize, usize) {
             self.coords.get_coords()
+        }
+
+        pub fn get_square(&self) -> i32 {
+
         }
     }
 }

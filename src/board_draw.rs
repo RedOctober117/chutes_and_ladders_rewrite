@@ -3,6 +3,7 @@ pub mod board_draw {
     use crate::Player;
 
     pub fn draw_board(dimension: usize, player_data: Vec<Player>) -> () {
+        
         let horizontal_scalar = 6;
         let vertical_scalar = 3;
 
